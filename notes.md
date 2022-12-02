@@ -12,3 +12,9 @@ Used SML.
 
 Was sick, so the ambition of keeping up with daily task was the real
 challenge.
+
+
+Day 2
+-----
+
+Used Haskell. Still sick. Ended up with a write-once-no-testing solution.
