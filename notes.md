@@ -18,3 +18,13 @@ Day 2
 -----
 
 Used Haskell. Still sick. Ended up with a write-once-no-testing solution.
+
+
+Day 3
+-----
+
+Used Rust. Still sick. Rust fitted fairly nice for the problem. 
+
+Main snag I encountered was that `chunks` only works on slices not
+iterators. However, it seem that `array_chuck` is in nightly. Or I
+could have used a crate like `itertools`.
