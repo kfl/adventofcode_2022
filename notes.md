@@ -5,8 +5,8 @@ Notes and Reflections from AoC 2022
 so stop reading if you haven't solved the tasks yet.**
 
 
-Day 1
------
+Day 1: Calorie Counting
+-----------------------
 
 Used SML.
 
@@ -14,14 +14,14 @@ Was sick, so the ambition of keeping up with daily task was the real
 challenge.
 
 
-Day 2
------
+Day 2: Rock Paper Scissors
+--------------------------
 
 Used Haskell. Still sick. Ended up with a write-once-no-testing solution.
 
 
-Day 3
------
+Day 3: Rucksack Reorganization
+------------------------------
 
 Used Rust. Still sick. Rust fitted fairly nice for the problem. 
 
