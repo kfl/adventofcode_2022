@@ -24,13 +24,13 @@ fn part1(input: Lines) -> usize {
 }
 
 fn badge(group: &[&str]) -> u8 {
-    *group[0]
+    *(group[0]
         .as_bytes()
         .iter()
         .filter(|item| group[1].as_bytes().contains(item))
         .filter(|item| group[2].as_bytes().contains(item))
         .next()
-        .unwrap()
+        .unwrap())
 }
 
 fn part2(input: Lines) -> usize {
