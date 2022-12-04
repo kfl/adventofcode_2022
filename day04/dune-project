@@ -1,0 +1,16 @@
+(lang dune 3.6)
+
+(name day4)
+
+(generate_opam_files false)
+
+(source
+ (github username/reponame))
+
+(authors "Ken Friis Larsen")
+
+(package
+ (name day4)
+ (depends ocaml dune))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
