@@ -28,3 +28,9 @@ Used Rust. Still sick. Rust fitted fairly nice for the problem.
 Main snag I encountered was that `chunks` only works on slices not
 iterators. However, it seem that `array_chuck` is in nightly. Or I
 could have used a crate like `itertools`.
+
+
+Day 4: Camp Cleanup
+-------------------
+
+Used OCaml.
