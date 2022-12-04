@@ -5,7 +5,7 @@
 (generate_opam_files false)
 
 (source
- (github username/reponame))
+ (github kfl/adventofcode_2022))
 
 (authors "Ken Friis Larsen")
 
