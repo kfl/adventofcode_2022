@@ -9,7 +9,7 @@ let parse_range input =
 let parse line =
   line |> String.lsplit2_exn ~on:',' |> pair_map parse_range
 
-let _test = List.map ~f:parse [
+let test = List.map ~f:parse [
   "2-4,6-8";
   "2-3,4-5";
   "5-7,7-9";
@@ -27,7 +27,7 @@ let part1 input =
   |> List.filter ~f:(fun (r1, r2) -> fully_contains r1 r2 || fully_contains r2 r1)
   |> List.length
 
-let _answer1 = printf "Part1 answer: %d\n" (part1 @@ input())
+let answer1 = printf "Part1 answer: %d\n" (part1 @@ input())
 
 let overlap ((a,b), (x,y)) =
   let lower, upper = max a x, min b y
@@ -38,4 +38,4 @@ let part2 input =
   |> List.filter ~f:overlap
   |> List.length
 
-let _answer2 = printf "Part2 answer: %d\n" (part2 @@ input())
+let answer2 = printf "Part2 answer: %d\n" (part2 @@ input())
