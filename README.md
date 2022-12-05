@@ -10,7 +10,7 @@ The current ambitions are:
  * Set a time box of max 1 hour per day.
  * Have some fun
  * Use at least seven different languages. Languages used so far: SML,
-   Haskell, Rust, OCaml.
+   Haskell, Rust, OCaml, Python.
 
 See [my notes](./notes.md) for a log of reflections for the daily
 puzzles (contains spoilers).
