@@ -47,3 +47,19 @@ labels, and my old-school ML aesthetics balk at that. Also, while I
 generally agrees with the idea that build tools should be opinionated,
 it annoys me when those opinions disagrees with my opinions. Hence I
 had to teach `dune` that warnings are **not** errors.
+
+
+Day 5: Supply Stacks
+--------------------
+
+Pre-code analysis: The hardest part seems to be the parsing, if it has
+to be fully general. Fortunately we have access to the only relevant
+input, and can derive some simplifying assumptions: crate names are a
+single upper case letter; the input comes in two parts, initial
+configuration and moves, separated by a blank line; the configuration
+has trailing whitespace to match all stacks.
+
+Used Python. Python's slicing was a nice fit for the janky parsing,
+and for implementing `multimove` for part 2. Likewise, `List` was an
+adequate stack. I started by giving type annotations, but after the
+parsing part I didn't feel the need and stopped.
