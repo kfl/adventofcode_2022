@@ -63,3 +63,13 @@ Used Python. Python's slicing was a nice fit for the janky parsing,
 and for implementing `multimove` for part 2. Likewise, `List` was an
 adequate stack. I started by giving type annotations, but after the
 parsing part I didn't feel the need and stopped.
+
+
+Day 6: Tuning Trouble
+---------------------
+
+Used F#. Use a window to find the markers, when all elements in a
+window are distinct we have a maker. My code is a bit too general as
+it find all markers, not just the first one. However, I using `Seq` so
+it should be computed in a lazy fashion.
+
