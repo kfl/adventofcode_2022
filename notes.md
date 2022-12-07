@@ -73,3 +73,11 @@ window are distinct we have a maker. My code is a bit too general as
 it find all markers, not just the first one. However, I using `Seq` so
 it should be computed in a lazy fashion.
 
+
+Day 7: No Space Left On Device
+------------------------------
+
+Used C++. Interesting parsing where based on the commands `cd` and
+`ls`. Not a problem I would normally use C++ for, but it seemed to
+make the problem more interesting, and it has been a while since I
+used modern C++ in anger.
