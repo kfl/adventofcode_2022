@@ -1,13 +1,8 @@
 {-# LANGUAGE LambdaCase #-}
 module Main where
 
---import Data.List
 import qualified Data.Char as C
-import Control.Monad (forM)
-import Data.Ix
-import Data.Monoid
 import qualified Data.Array.Unboxed as A
-
 
 test =  parse [ "30373"
               , "25512"
@@ -34,10 +29,10 @@ isVisible trees ((i,j), x) = i `elem` [li,ui] ||
   where
     ((li,lj), (ui,uj)) = A.bounds trees
     higher = all (x >)
-    left = [trees A.! (i,c) | c <- range (lj, j-1)]
-    right = [trees A.! (i,c) | c <- range (j+1, uj)]
-    top = [trees A.! (r,j) | r <- range (li, i-1)]
-    bot = [trees A.! (r,j) | r <- range (i+1, ui)]
+    left = [trees A.! (i,c) | c <- A.range (lj, j-1)]
+    right = [trees A.! (i,c) | c <- A.range (j+1, uj)]
+    top = [trees A.! (r,j) | r <- A.range (li, i-1)]
+    bot = [trees A.! (r,j) | r <- A.range (i+1, ui)]
 
 visible trees = filter (isVisible trees) $ A.assocs trees
 
@@ -53,15 +48,15 @@ scenicScore trees ((i,j), x) = viewable left * viewable right * viewable top * v
   where
     ((li,lj), (ui,uj)) = A.bounds trees
     viewable = length . takeUntil (x <=)
-    left = reverse [trees A.! (i,c) | c <- range (lj, j-1)]
-    right = [trees A.! (i,c) | c <- range (j+1, uj)]
-    top = reverse [trees A.! (r,j) | r <- range (li, i-1)]
-    bot = [trees A.! (r,j) | r <- range (i+1, ui)]
+    left = reverse [trees A.! (i,c) | c <- A.range (lj, j-1)]
+    right = [trees A.! (i,c) | c <- A.range (j+1, uj)]
+    top = reverse [trees A.! (r,j) | r <- A.range (li, i-1)]
+    bot = [trees A.! (r,j) | r <- A.range (i+1, ui)]
 
 scores trees = map (scenicScore trees) $ A.assocs trees
 
 part2 :: Trees -> Int
-part2 input = maximum $ map (scenicScore input) $ A.assocs input
+part2 input = maximum $ scores input
 answer2 = part2 <$> input
 
 main = do
