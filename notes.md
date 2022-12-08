@@ -81,3 +81,9 @@ Used C++. Interesting parsing where based on the commands `cd` and
 `ls`. Not a problem I would normally use C++ for, but it seemed to
 make the problem more interesting, and it has been a while since I
 used modern C++ in anger.
+
+
+Day 8: Treetop Tree House
+-------------------------
+
+Used Haskell. Had to write a `takeUntil` function for part 2.
