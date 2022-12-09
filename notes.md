@@ -87,3 +87,9 @@ Day 8: Treetop Tree House
 -------------------------
 
 Used Haskell. Had to write a `takeUntil` function for part 2.
+
+
+Day 9: Rope Bridge
+------------------
+
+Used Haskell.
