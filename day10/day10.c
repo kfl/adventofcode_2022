@@ -41,7 +41,7 @@ static state cycle_check(int x, int cycle, state s) {
 
   // For part 2 we just print the the result as we go
   int pixel_pos = (cycle - 1) % 40;
-  printf("%c%s", abs(x - pixel_pos) <= 1 ? '#' : ' ',
+  printf("%s%s", abs(x - pixel_pos) <= 1 ? "█" : " ",
                  pixel_pos == 39 ? "\n" : "");
 
   return s;
