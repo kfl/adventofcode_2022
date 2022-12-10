@@ -93,3 +93,14 @@ Day 9: Rope Bridge
 ------------------
 
 Used Haskell.
+
+
+Day 10: Cathode-Ray Tube
+------------------------
+
+Used C. Against one of my soft AoC principles, I ended with a solution
+that solved both parts at the same time (and even prints the solution
+to part 2 first). My solution for solving part 2 is basically the same
+as for part 1, but with a different `check_cycle` function. Alas, the
+easiest way forward was to add three lines to `check_cycle` and be
+done with it.
