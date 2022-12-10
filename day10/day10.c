@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef enum { noop, addx} command_t;
+typedef enum { noop, addx } command_t;
 
 typedef struct {
   command_t type;
@@ -11,16 +11,16 @@ typedef struct {
 
 
 command parse_line(char *line) {
-  // We know that line is not need after parsing, thus it is OK to
+  // We know that line is not needed after parsing, thus it's OK to
   // modify it with strsep
 
   char *op = strsep(&line, " ");
 
   if (strncmp(op, "noop", 4) == 0) {
-    return (command){.type = noop, .arg = 0};
+    return (command){.type = noop};
   }
 
-  // if not noop we assume addx and read the argument
+  // if not noop, we assume addx and read the argument
   char *n_str = strsep(&line, " ");
   int n = strtol(n_str, NULL, 10);
   return (command){.type = addx, .arg = n};
@@ -70,14 +70,15 @@ int interpret_commands(const char *filename) {
 
     switch (cmd.type) {
     case noop:
-      cycle++;
+      cycle += 1;
       break;
 
     case addx:
-      cycle++;
+      cycle += 1;
       s = cycle_check(x, cycle, s);
+
       x += cmd.arg;
-      cycle ++;
+      cycle += 1;
       break;
     }
   }
