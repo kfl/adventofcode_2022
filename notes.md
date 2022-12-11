@@ -104,3 +104,20 @@ to part 2 first). My solution for solving part 2 is basically the same
 as for part 1, but with a different `check_cycle` function. Alas, the
 easiest way forward was to add three lines to `check_cycle` and be
 done with it.
+
+
+Day 11: Monkey in the Middle
+----------------------------
+
+Pre-code analysis: Parsing looks like it could be end up being rather
+interesting: what is the grammar for monkey operations, how deep
+expressions are allowed? What tests are allowed, only `divisible`?
+Alas, `input.txt` is so small that its not worth writing a parser,
+sadness 😞.
+
+Used OCaml, plain without any libraries. Ended up with some fairly
+imperative code, but that felt like the natural paradigm for the day's
+task. The specification for task 2 was a bit vague and nasty at first
+glance, bit my first idea of using a the numbers from the `divisible`
+tests to form a modulo field worked out. The `turn` code from part 1
+and 2 could be refactored out and shared by the two parts.

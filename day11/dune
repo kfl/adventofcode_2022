@@ -1,0 +1,7 @@
+(executable
+ (public_name day11)
+ (name day11))
+
+(env
+  (dev
+    (flags (:standard -warn-error -A -w -32))))
