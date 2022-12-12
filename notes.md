@@ -121,3 +121,15 @@ task. The specification for task 2 was a bit vague and nasty at first
 glance, bit my first idea of using a the numbers from the `divisible`
 tests to form a modulo field worked out. The `turn` code from part 1
 and 2 could be refactored out and shared by the two parts.
+
+
+Day 12: Hill Climbing Algorithm
+-------------------------------
+
+Pre-code analysis: Looks like a straightforward BFS (or
+Dijkstra/A-star) problem for part 1.
+
+Used Haskell. Implemented Dijkstra's algorithm for the path search in
+part 1. Part 2 is a simple generalisation of the solution for part 1,
+instead of a single starting position we have many starting positions
+(not all have solutions).
