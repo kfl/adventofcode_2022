@@ -133,3 +133,14 @@ Used Haskell. Implemented Dijkstra's algorithm for the path search in
 part 1. Part 2 is a simple generalisation of the solution for part 1,
 instead of a single starting position we have many starting positions
 (not all have solutions).
+
+
+Day 13: Distress Signal
+-----------------------
+
+Used Haskell. A task well-suited for Haskell: parser combinators for
+input parsing, and the task for part 1 was to make a custom instance
+of the `Ord` type-class. For part 2, when you have the custom `Ord`
+instance, then the standard library has all the needed utility
+functions (such as `sort`) for solving the task in a straightforward
+manner.
