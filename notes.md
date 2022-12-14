@@ -144,3 +144,10 @@ of the `Ord` type-class. For part 2, when you have the custom `Ord`
 instance, then the standard library has all the needed utility
 functions (such as `sort`) for solving the task in a straightforward
 manner.
+
+
+Day 14: Regolith Reservoir
+--------------------------
+
+Used Haskell, but should just have used a language with mutable
+arrays. Part 2 takes several seconds to find the answer.
