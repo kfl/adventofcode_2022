@@ -56,15 +56,9 @@ parsePackage str = res
 
 instance Ord Package where
   compare (I x) (I y) = compare x y
-  compare (I x) ys@(Lst _) = compare (Lst [I x]) ys
-  compare xs@(Lst _) (I y) = compare xs $ Lst [I y]
-  compare (Lst []) (Lst []) = EQ
-  compare (Lst []) (Lst (_ : _)) = LT
-  compare (Lst (_:_)) (Lst[]) = GT
-  compare (Lst (x : xs)) (Lst (y : ys)) =
-    case compare x y of
-      EQ -> compare (Lst xs) (Lst ys)
-      x -> x
+  compare x@(I _) ys@(Lst _) = compare (Lst [x]) ys
+  compare xs@(Lst _) y@(I _) = compare xs $ Lst [y]
+  compare (Lst xs) (Lst ys) = compare xs ys
 
 part1, part2 :: Input -> Int
 part1 input = sum [ i | ((x,y), i) <- zip input [1..], x < y ]
