@@ -151,3 +151,13 @@ Day 14: Regolith Reservoir
 
 Used Haskell, but should just have used a language with mutable
 arrays. Part 2 takes several seconds to find the answer.
+
+
+Day 15: Beacon Exclusion Zone
+-----------------------------
+
+Used Haskell. Part two is interesting. During the event I used an idea
+where I find candidate positions by traversing the border of each
+sensor range. It works and is reasonably fast (less than 5s for
+finding both answers). However, the current solution most certainly
+can be improved by using smarter data-structures, I think.
