@@ -8,6 +8,7 @@ import Text.Regex.TDFA ((=~))
 import qualified Data.Ix as I
 import qualified Data.Set as Set
 import Data.Set (Set)
+import Data.Foldable (asum)
 
 
 test =  map parse [ "Sensor at x=2, y=18: closest beacon is at x=-2, y=15"
@@ -79,23 +80,22 @@ beyond each sensor range. This is easy to compute as the sensor ranges
 are diamond shaped because we are using Manhattan distances.
 -}
 
-candidates sensors range = Set.unions cands
+candidates sensors range = asum cands
   where cands = map cand $ Set.toList sensors
         valid = I.inRange range
-        cand ((x,y), d) =
-          Set.fromList [ (i,j) | (i,j) <- zip [x-d' .. x] [y, y-1 .. y-d'] ++
-                                          zip [x .. x+d'] [y-d' .. y] ++
-                                          zip [x-d' .. x] [y .. y+d'] ++
-                                          zip [x .. x+d'] [y+d', y-1 .. y],
-                         valid i, valid j,             -- i and j must in range
-                         not $ covered sensors (i,j) ] -- cannot be covered by other sensors
+        cand ((x,y), d) = [ (i,j) | (i,j) <- zip [x-d' .. x] [y, y-1 .. y-d'] ++
+                                             zip [x .. x+d'] [y-d' .. y] ++
+                                             zip [x-d' .. x] [y .. y+d'] ++
+                                             zip [x .. x+d'] [y+d', y-1 .. y],
+                            valid i, valid j,             -- i and j must in range
+                            not $ covered sensors (i,j) ] -- cannot be covered by other sensors
           where d' = d + 1
 
 tuning (x,y) = x * 4000000 + y
 
 part2 input = tuning pos
   where sensors = mkSensors input
-        [pos] = Set.toList $ candidates sensors (0, 4000000)
+        pos = head $ candidates sensors (0, 4000000)
 answer2 = part2 <$> input
 
 main = do
