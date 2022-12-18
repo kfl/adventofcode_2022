@@ -161,3 +161,18 @@ where I find candidate positions by traversing the border of each
 sensor range. It works and is reasonably fast (less than 5s for
 finding both answers). However, the current solution most certainly
 can be improved by using smarter data-structures, I think.
+
+
+Day 16: Proboscidea Volcanium
+-----------------------------
+
+Missed during event.
+
+
+Day 17: Pyroclastic Flow
+------------------------
+
+Missed during event.
+
+
+
