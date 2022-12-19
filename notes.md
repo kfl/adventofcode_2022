@@ -185,3 +185,9 @@ think of the problem as a 3D Connected-component labelling, with
 6-connected neighbourhoods.
 
 Used Haskell for part 1 during event. Missed part 2 during event.
+
+
+Day 19: Not Enough Minerals
+---------------------------
+
+Missed during event.
