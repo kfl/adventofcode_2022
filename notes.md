@@ -175,4 +175,13 @@ Day 17: Pyroclastic Flow
 Missed during event.
 
 
+Day 18: Boiling Boulders
+------------------------
 
+Pre-code analysis: looks like we are going to work with
+cubiods. Should have spend more time building Minecraft
+extensions. After some more thinking, I think it makes more sense to
+think of the problem as a 3D Connected-component labelling, with
+6-connected neighbourhoods.
+
+Used Haskell for part 1 during event. Missed part 2 during event.
