@@ -191,3 +191,26 @@ Day 19: Not Enough Minerals
 ---------------------------
 
 Missed during event.
+
+
+Day 20: Grove Positioning System
+--------------------------------
+
+Missed
+
+
+Day 21: Monkey Math
+-------------------
+
+Missed. But it looks rather interesting.
+
+
+Day 22: Monkey Map
+------------------
+
+Missed.
+
+
+Day 23: Unstable Diffusion
+--------------------------
+
